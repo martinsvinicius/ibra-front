@@ -1,11 +1,11 @@
-import { Header } from '../components/Header';
+import { Home } from './Home';
 
 import { GlobalStyle } from '../styles/global';
 
-export default function Home() {
+export default function App() {
   return (
     <>
-      <Header />
+      <Home />
       <GlobalStyle />
     </>
   );
