@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 900;
     color: var(--black-600);
 
@@ -35,6 +35,9 @@ export const Container = styled.div`
       img {
         display: block;
         margin-left: auto;
+
+        width: 40rem;
+        height: 40rem;
       }
     }
 

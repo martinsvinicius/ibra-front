@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.header`
   width: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
 `;
 
 export const HeaderContent = styled.div`
@@ -39,15 +39,27 @@ export const Nav = styled.nav`
 
     li {
       margin: 0 3rem;
-
-      &:first-child {
-        margin-left: 0;
-      }
     }
 
     li a {
       font-weight: 500;
       font-size: 1.1rem;
+    }
+
+    @media (max-width: 1995px) {
+      li {
+        margin: 0 2rem;
+      }
+    }
+
+    @media (max-width: 1310px) {
+      li {
+        margin: 0 1rem;
+      }
+    }
+
+    li:first-child {
+      margin-left: 0;
     }
   }
 `;

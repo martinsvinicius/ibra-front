@@ -24,11 +24,18 @@ export const GlobalStyle = createGlobalStyle`
     --gray: #515151;
 
     --background-gray: #F8F8F8;
+    --background-blue: #3EAEE0;
   }
 
-  @media(max-width: 1080px) {
+  @media(max-width: 1590px) {
     html {
       font-size: 93.75%;
+    }
+  }
+
+  @media(max-width: 1230px) {
+    html {
+      font-size: 90%;
     }
   }
 
