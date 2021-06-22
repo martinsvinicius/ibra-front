@@ -1,8 +1,8 @@
 import {Nav, Container, HeaderContent } from './styles';
 
-import { LoginButton } from '../LoginButton';
+import LoginButton from '../LoginButton';
 
-export function Header() {
+export default function Header() {
   return (
     <Container>
       <HeaderContent>
