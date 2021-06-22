@@ -1,8 +1,8 @@
 import Header from '../../components/Header';
 
-import Hero from './Hero';
+import Hero from '../../components/HeroSection';
 
-import { Container, AdvantagesSection, Advantages, Advantage, ContactUsSection } from './styles';
+import { Container, AdvantagesSection, Advantages, Advantage, ContactUsSection } from '../../styles/pages/home';
 
 export default function Home() {
   return (
