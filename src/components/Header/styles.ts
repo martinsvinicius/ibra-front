@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
+  width: 100%;
+  background: #FFFFFF;
+`;
+
+export const HeaderContent = styled.div`
   display: flex;
   max-width: 1632px;
 

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  section {
+    background: #ffffff;
+  }
+
   h2 {
     text-align: center;
     font-size: 2rem;
@@ -23,7 +27,7 @@ export const Container = styled.div`
     gap: 4rem;
     grid-template-columns: 1fr 1fr;
 
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
 
     .heroImageContainer {
       display: block;
@@ -77,9 +81,11 @@ export const Container = styled.div`
   }
 `;
 
-export const Clip = styled.img`
-  display: block;
-  margin: 0 auto;
-  margin-top: 9.5rem;
-  text-align: center;
+export const Wave = styled.div`
+  width: 100%;
+  margin: 0 !important;
+  height: 172px;
+  background: url("assets/images/wave.png") no-repeat;
+  background-size: cover;
+  background-position: center;
 `;
