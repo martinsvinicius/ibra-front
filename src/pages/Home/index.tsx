@@ -66,7 +66,7 @@ export default function Home() {
         <img src="assets/icons/contact-hero.svg" />
 
         <div>
-          <h3>Noso time está pronto <br /> para te ouvir!</h3>
+          <h3>Nosso time está pronto <br /> para te ouvir!</h3>
           <p>
             Você quer falar com a gente a respeito de parcerias, contatos
             comerciais e outras dúvidas? Entre em contato conosco!
