@@ -2,7 +2,7 @@ import { Container, Wave } from './styles';
 
 import { IoMdAddCircle } from 'react-icons/io';
 
-export function Hero() {
+export default function Hero() {
   return (
     <Container>
       <section>
