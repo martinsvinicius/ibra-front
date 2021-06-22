@@ -1,10 +1,10 @@
 import Header from '../../components/Header';
 
-import { Hero } from './Hero';
+import Hero from './Hero';
 
 import { Container, AdvantagesSection, Advantages, Advantage, ContactUsSection } from './styles';
 
-export function Home() {
+export default function Home() {
   return (
     <Container>
       <Header />
