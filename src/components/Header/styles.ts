@@ -11,13 +11,14 @@ export const Container = styled.header`
   justify-content: space-between;
 
   img {
-    width: 9.5rem;
+    width: 10rem;
     height: 12rem;
   }
 `;
 
 export const Nav = styled.nav`
   flex: 0.9;
+  margin-top: -3rem;
   display: flex;
 
   align-items: center;
@@ -40,7 +41,7 @@ export const Nav = styled.nav`
     }
 
     li a {
-      font-weight: 400;
+      font-weight: 500;
       font-size: 1.1rem;
     }
   }
