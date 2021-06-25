@@ -33,10 +33,6 @@ export const Nav = styled.nav`
     list-style: none;
     display: flex;
 
-    li a.active {
-      color: var(--blue-active);
-    }
-
     li {
       margin: 0 3rem;
     }
@@ -44,6 +40,12 @@ export const Nav = styled.nav`
     li a {
       font-weight: 500;
       font-size: 1.1rem;
+
+      transition: all .2s;
+
+      &:hover {
+        color: var(--blue-active);
+      }
     }
 
     @media (max-width: 1995px) {

@@ -10,7 +10,7 @@ export default function Header() {
 
         <Nav>
           <ul>
-            <li><a href="#" className="active">Quem somos</a></li>
+            <li><a href="#">Quem somos</a></li>
             <li><a href="#">Vantagens</a></li>
             <li><a href="#">Vídeos</a></li>
             <li><a href="#">Liderança</a></li>
