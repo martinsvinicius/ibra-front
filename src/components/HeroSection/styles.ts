@@ -39,6 +39,13 @@ export const Container = styled.div`
         width: 40rem;
         height: 40rem;
       }
+
+      @media (max-width: 1420px) {
+        img {
+          width: 80%;
+          height: auto;
+        }
+      }
     }
 
     .heroDescription {
