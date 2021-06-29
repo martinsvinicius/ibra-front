@@ -18,6 +18,9 @@ export const Button = styled.button`
 
   transition: all .2s;
 
+  cursor: not-allowed;
+  opacity: 0.4;
+
   &:hover {
     background: var(--blue-active);
     color: #fff;

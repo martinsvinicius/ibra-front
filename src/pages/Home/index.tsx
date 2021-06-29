@@ -21,7 +21,7 @@ export default function Home() {
         <Hero />
       </section>
 
-      <AdvantagesSection>
+      <AdvantagesSection id="advantages">
         <h2>
           Lorem <span className="blue-200">ipsum</span> dolor{' '}
           <span className="blue-active">sit amet</span>

@@ -40,7 +40,7 @@ export function Slider() {
   };
 
   return (
-    <Container>
+    <Container id="slider">
       <h2>
         Lorem <span className="light">ipsum</span> dolor{' '}
         <span className="strong">sit amet</span>

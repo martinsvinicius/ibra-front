@@ -45,6 +45,10 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: var(--background-gray);
     color: var(--gray);
