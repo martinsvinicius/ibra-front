@@ -2,7 +2,15 @@ import Header from '../../components/Header';
 
 import Hero from '../../components/HeroSection';
 
-import { Container, AdvantagesSection, Advantages, Advantage, ContactUsSection } from '../../styles/pages/home';
+import { Slider } from '../../components/Slider';
+
+import {
+  Container,
+  AdvantagesSection,
+  Advantages,
+  Advantage,
+  ContactUsSection,
+} from '../../styles/pages/home';
 
 export default function Home() {
   return (
@@ -13,7 +21,7 @@ export default function Home() {
         <Hero />
       </section>
 
-      <AdvantagesSection>
+      <AdvantagesSection id="advantages">
         <h2>
           Lorem <span className="blue-200">ipsum</span> dolor{' '}
           <span className="blue-active">sit amet</span>
@@ -66,16 +74,16 @@ export default function Home() {
         <img src="assets/icons/contact-hero.svg" />
 
         <div>
-          <h3>Nosso time está pronto <br /> para te ouvir!</h3>
+          <h3>Nosso time está pronto para te ouvir!</h3>
           <p>
             Você quer falar com a gente a respeito de parcerias, contatos
             comerciais e outras dúvidas? Entre em contato conosco!
           </p>
-          <button type="button">
-            FALE CONOSCO
-          </button>
+          <button type="button">FALE CONOSCO</button>
         </div>
       </ContactUsSection>
+
+      <Slider />
     </Container>
   );
 }
