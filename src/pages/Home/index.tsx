@@ -4,6 +4,8 @@ import Hero from '../../components/HeroSection';
 
 import { Slider } from '../../components/Slider';
 
+import Footer from '../../components/Footer';
+
 import {
   Container,
   AdvantagesSection,
@@ -84,6 +86,8 @@ export default function Home() {
       </ContactUsSection>
 
       <Slider />
+
+      <Footer />
     </Container>
   );
 }

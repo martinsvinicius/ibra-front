@@ -57,6 +57,11 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin="anonymous"></script>
+
+          <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js" crossOrigin="anonymous"></script>
+
+          <script src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js" crossOrigin="anonymous"></script>
         </body>
       </Html>
     );
