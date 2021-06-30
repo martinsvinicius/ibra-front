@@ -5,6 +5,8 @@ import Hero from '../../components/HeroSection';
 import { Slider } from '../../components/Slider';
 import { VideoPlayer } from '../../components/VideoPlayer';
 
+import Footer from '../../components/Footer';
+
 import {
   Container,
   AdvantagesSection,
@@ -90,6 +92,8 @@ export default function Home() {
       </VideoSection>
 
       <Slider />
+
+      <Footer />
     </Container>
   );
 }
