@@ -1,67 +1,51 @@
 import styled from 'styled-components';
 
-export const Container = styled.header`
-  width: 100%;
+export const StyledHeader = styled.header`
   background: #ffffff;
-`;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 
-export const HeaderContent = styled.div`
-  display: flex;
-  max-width: 1632px;
+  a.styled-link {
+    font-weight: bold;
+    font-size: 1.1rem;
 
-  margin: 0 auto;
+    color: var(--gray-200);
 
-  padding: 1.5rem 2rem;
+    transition: all 0.2s;
 
-  justify-content: space-between;
+    &:hover {
+      color: var(--blue-active) !important;
+    }
+  }
 
-  img {
-    width: 10rem;
-    height: 12rem;
+  div.links-container {
+    margin: 0 auto;
+  }
+
+  // responsive paddings
+  div.container {
+    @media (min-width: 1375px) {
+      max-width: 1632px;
+
+      a.styled-link + a {
+        padding-left: 5rem;
+      }
+    }
+
+    @media (max-width: 1375px) {
+      a.styled-link + a {
+        padding-left: 2rem;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      a.styled-link + a {
+        padding-left: 1rem;
+      }
+    }
   }
 `;
 
-export const Nav = styled.nav`
-  flex: 0.9;
-  margin-top: -3rem;
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  ul {
-    list-style: none;
-    display: flex;
-
-    li {
-      margin: 0 3rem;
-    }
-
-    li a {
-      font-weight: 500;
-      font-size: 1.1rem;
-
-      transition: all .2s;
-
-      &:hover {
-        color: var(--blue-active);
-      }
-    }
-
-    @media (max-width: 1995px) {
-      li {
-        margin: 0 2rem;
-      }
-    }
-
-    @media (max-width: 1310px) {
-      li {
-        margin: 0 1rem;
-      }
-    }
-
-    li:first-child {
-      margin-left: 0;
-    }
-  }
+export const LogginButtonContainer = styled.div`
+  margin-left: auto;
 `;

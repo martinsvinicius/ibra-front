@@ -3,6 +3,7 @@ import Header from '../../components/Header';
 import Hero from '../../components/HeroSection';
 
 import { Slider } from '../../components/Slider';
+import { VideoPlayer } from '../../components/VideoPlayer';
 
 import Footer from '../../components/Footer';
 
@@ -12,6 +13,7 @@ import {
   Advantages,
   Advantage,
   ContactUsSection,
+  VideoSection
 } from '../../styles/pages/home';
 
 export default function Home() {
@@ -84,6 +86,10 @@ export default function Home() {
           <button type="button">FALE CONOSCO</button>
         </div>
       </ContactUsSection>
+
+      <VideoSection>
+        <VideoPlayer />
+      </VideoSection>
 
       <Slider />
 

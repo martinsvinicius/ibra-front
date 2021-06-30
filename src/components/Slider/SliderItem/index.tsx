@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IoMdAdd } from 'react-icons/io';
 
-import { Container } from './styles';
+import { Container, ImageContainer} from './styles';
 
 interface SliderItemProps {
   imageSource: string;
@@ -20,8 +20,13 @@ export function SliderItem({
 }: SliderItemProps) {
   return (
     <Container>
-      <img src={imageSource} alt={title} />
-
+      <ImageContainer>
+        <div>
+          <img src={imageSource}  alt={title} />
+          <span><img src="assets/icons/white-linkedin.svg" alt={`LinkedIn | ${title}`} /></span>
+        </div>
+      </ImageContainer>
+      
       <strong>{title}</strong>
 
       <p>{description}</p>

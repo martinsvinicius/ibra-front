@@ -2,7 +2,7 @@ import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
 
 interface ContainerProps {
-    isActive: boolean;
+    isactive: string;
 }
 
 export const Container = styled(Card)<ContainerProps>`
@@ -12,7 +12,7 @@ export const Container = styled(Card)<ContainerProps>`
 
     div.card-header {
         width: 100%;
-        background-color: ${props => props.isActive ? "var(--blue-300)" : "var(--blue-200)"};
+        background-color: ${props => (props.isactive === "true") ? "var(--blue-300)" : "var(--blue-200)"};
         color: #fff;
         font-weight: 600;
         font-size: 1.5rem;

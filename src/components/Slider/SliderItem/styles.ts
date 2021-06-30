@@ -7,13 +7,6 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  img {
-    border-radius: 50%;
-    max-width: 80%;
-    height: auto;
-    position: relative;
-  }
-
   strong {
     display: block;
     margin: 2rem 0 1rem;
@@ -32,15 +25,15 @@ export const Container = styled.div`
   a {
     display: flex;
     align-items: center;
-    color: #0096D8;
+    color: #0096d8;
     margin-top: 1.5rem;
 
     font-weight: 500;
 
-    transform: all .2s;
+    transform: all 0.2s;
 
     span {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
 
     &:hover {
@@ -48,6 +41,75 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const ImageContainer = styled.div`
+  border-radius: 0;
+  display: inline-block;
+
+  div {
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      width: 340px;
+      height: 340px;
+    }
+
+    @media (max-width: 1250px) {
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    span {
+      position: absolute;
+      color: #ffffff;
+
+      border-radius: 50%;
+
+      left: 0;
+      text-align: center;
+      width: 100%;
+      background: rgba(0, 150, 216, 0.7);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      bottom: 0;
+      padding: 20px 0;
+
+      img {
+        max-height: 40px;
+      }
+    }
+  }
+`;
+
+// export const ImageContainer = styled.div`
+//   position: relative;
+
+//   img#user-img {
+//     margin: 0 auto;
+//     border-radius: 50%;
+//     max-width: 80%;
+//     height: auto;
+//   }
+
+//   img#user-linkedin {
+//     border-radius: 120px;
+//   }
+
+//   button {
+//     position: absolute;
+//     bottom: -54.5%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     -ms-transform: translate(-50%, -50%);
+//   }
+// `;
 
 // export const ImageContainer = styled.div`
 // //   display: block;

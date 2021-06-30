@@ -1,20 +1,18 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
+import { CardProps } from 'react-bootstrap';
 
 import { Container } from './styles';
 
-interface AccordionCardProps {
+interface AccordionCardProps extends CardProps {
   children: ReactNode;
+  isActive: boolean;
 }
 
-export default function AccordionCard({ children }: AccordionCardProps) {
-  const [isActive, setActive] = useState(false);
-
-  function handleSetActive() {
-    setActive(!isActive);
-  }
+export default function AccordionCard({ children, isActive, ...rest }: AccordionCardProps) {
+  const isActiveString = isActive ? "true" : "false";
 
   return (
-    <Container onClick={handleSetActive} isActive={isActive}>
+    <Container isactive={isActiveString} {...rest}>
       {children}
     </Container>
   );

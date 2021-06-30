@@ -159,3 +159,9 @@ export const ContactUsSection = styled.section`
     }
   }
 `;
+
+export const VideoSection = styled.section`
+  max-width: 1256px;
+  margin: 10rem auto;
+  padding: 0 2rem;
+`;

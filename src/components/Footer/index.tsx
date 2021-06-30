@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 
 import { Accordion, Card } from 'react-bootstrap';
 
@@ -7,6 +8,8 @@ import AccordionCard from './AccordionCard';
 import { Container, FooterContent, Description, LinksList, AccordionLinksList } from './styles';
 
 export default function Footer() {
+  const [currentActive, setCurrentActive] = useState<string | null >(null);
+
   return (
     <Container>
       <FooterContent>
@@ -53,9 +56,9 @@ export default function Footer() {
           </LinksList>
 
           <AccordionLinksList>
-            <Accordion>
+            <Accordion onSelect={(e) => {setCurrentActive(e)}}>
               
-              <AccordionCard>
+              <AccordionCard isActive={(currentActive === "0")}>
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                   Lorem ipsum
                 </Accordion.Toggle>
@@ -70,7 +73,7 @@ export default function Footer() {
                 </Accordion.Collapse>
               </AccordionCard>
 
-              <AccordionCard>
+              <AccordionCard isActive={(currentActive === "1")}>
                 <Accordion.Toggle as={Card.Header} eventKey="1">
                 Lorem ipsum
                 </Accordion.Toggle>
@@ -84,7 +87,7 @@ export default function Footer() {
                 </Accordion.Collapse>
               </AccordionCard>
 
-              <AccordionCard>
+              <AccordionCard isActive={(currentActive === "2")}>
                 <Accordion.Toggle as={Card.Header} eventKey="2">
                 Lorem ipsum
                 </Accordion.Toggle>
@@ -98,7 +101,7 @@ export default function Footer() {
                 </Accordion.Collapse>
               </AccordionCard>
 
-              <AccordionCard>
+              <AccordionCard isActive={(currentActive === "3")}>
                 <Accordion.Toggle as={Card.Header} eventKey="3">
                 Lorem ipsum
                 </Accordion.Toggle>
@@ -112,7 +115,7 @@ export default function Footer() {
                 </Accordion.Collapse>
               </AccordionCard>
 
-              <AccordionCard>
+              <AccordionCard isActive={(currentActive === "4")}>
                 <Accordion.Toggle as={Card.Header} eventKey="4">
                 Lorem ipsum
                 </Accordion.Toggle>
