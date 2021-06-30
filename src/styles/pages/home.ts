@@ -19,12 +19,14 @@ export const Container = styled.main`
 
 export const AdvantagesSection = styled.section`
   margin-top: 5rem;
-  
+
   h2 {
     text-align: center;
     font-weight: 700;
     font-size: 3rem;
   }
+
+  padding: 0 3rem;
 `;
 
 export const Advantages = styled.div`
@@ -37,7 +39,7 @@ export const Advantage = styled.div`
   display: grid;
   margin: 2rem 0;
   align-items: center;
-  grid-template-columns: 1fr 10rem 1fr;
+  grid-template-columns: 40% 20% 40%;
 
   div.advantageDescription {
     text-align: center;
@@ -70,16 +72,20 @@ export const Advantage = styled.div`
     color: #fff;
     font-weight: bold;
     font-size: 2.5rem;
-    background-color: #3EAEE0;
+    background-color: #3eaee0;
     border-radius: 50%;
   }
 
   div.advantageImage {
     padding: 2rem 1.8rem;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 1rem;
 
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.27);
+
+    img {
+      width: 100%;
+    }
   }
 `;
 
@@ -96,11 +102,18 @@ export const ContactUsSection = styled.section`
     margin-left: auto;
   }
 
+  @media (max-width: 1420px) {
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+
   div {
     align-self: center;
     color: #fff;
     min-height: 80%;
-    padding: 1.2rem 4rem;
+    padding: 2rem 4rem;
     background: var(--background-blue);
 
     display: flex;
@@ -108,10 +121,10 @@ export const ContactUsSection = styled.section`
     justify-content: center;
 
     border-radius: 1.2rem 0 0 1.2rem;
-    
+
     h3 {
       font-weight: 700;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     p {
@@ -128,16 +141,16 @@ export const ContactUsSection = styled.section`
       line-height: 2.8rem;
       color: var(--blue-active);
       font-weight: bold;
-      background: #FFFFFF;
+      background: #ffffff;
 
-      font-size: .95rem;
+      font-size: 0.95rem;
 
       padding: 0 3rem;
 
       border: none;
-      border-radius: .3rem;
+      border-radius: 0.3rem;
 
-      transition: all .2s;
+      transition: all 0.2s;
 
       &:hover {
         background: var(--blue-active);
