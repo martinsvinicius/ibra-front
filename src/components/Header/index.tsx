@@ -15,12 +15,12 @@ export default function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-center" id="responsive-navbar-nav">
             <Nav className="me-auto links-container">
-              <Nav.Link className="styled-link" href="#">Quem somos</Nav.Link>
+              <Nav.Link className="styled-link" href="#quem-somos">Quem somos</Nav.Link>
               <Nav.Link className="styled-link" href="#advantages">Vantagens</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Vídeos</Nav.Link>
+              <Nav.Link className="styled-link" href="#video">Vídeos</Nav.Link>
               <Nav.Link className="styled-link" href="#slider">Liderança</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Cases</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Fale conosco</Nav.Link>
+              <Nav.Link className="styled-link" href="#cases">Cases</Nav.Link>
+              <Nav.Link className="styled-link" href="#contact-us">Fale conosco</Nav.Link>
             </Nav>
 
             <LogginButtonContainer>

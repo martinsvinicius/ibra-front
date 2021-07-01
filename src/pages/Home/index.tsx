@@ -94,7 +94,7 @@ export default function Home() {
         </Advantages>
       </AdvantagesSection>
 
-      <ContactUsSection>
+      <ContactUsSection id="contact-us">
         <img src="assets/icons/contact-hero.svg" />
 
         <div>
@@ -103,11 +103,11 @@ export default function Home() {
             Você quer falar com a gente a respeito de parcerias, contatos
             comerciais e outras dúvidas? Entre em contato conosco!
           </p>
-          <button type="button">FALE CONOSCO</button>
+          <a href="#contact-us-form">FALE CONOSCO</a>
         </div>
       </ContactUsSection>
 
-      <VideoSection>
+      <VideoSection id="video">
         <h2>
           Lorem <span className="blue-200">ipsum</span> dolor{' '}
           <span className="blue-active">sit amet</span>
@@ -117,7 +117,7 @@ export default function Home() {
 
       <Slider />
 
-      <FormSection>
+      <FormSection id="contact-us-form">
         <FormContent>
           <div>
             <h2>

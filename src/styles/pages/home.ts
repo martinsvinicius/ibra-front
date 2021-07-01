@@ -157,15 +157,20 @@ export const ContactUsSection = styled.section`
       margin: 1.8rem 0;
     }
 
-    button {
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       max-width: 14rem;
       height: 2.8rem;
-      line-height: 2.8rem;
       color: var(--blue-active);
       font-weight: bold;
       background: #ffffff;
 
       font-size: 0.95rem;
+      
+      text-decoration: none;
 
       padding: 0 3rem;
 
