@@ -23,7 +23,7 @@ export function SliderItem({
       <ImageContainer>
         <div>
           <img src={imageSource}  alt={title} />
-          <span><img src="assets/icons/white-linkedin.svg" alt={`LinkedIn | ${title}`} /></span>
+          <span id="linkedinButton"><img src="assets/icons/white-linkedin.svg" alt={`LinkedIn | ${title}`} /></span>
         </div>
       </ImageContainer>
       

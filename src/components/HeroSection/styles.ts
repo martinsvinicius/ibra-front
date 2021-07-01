@@ -18,6 +18,10 @@ export const Container = styled.div`
     span:last-child {
       color: var(--blue-active);
     }
+
+    @media(max-width: 600px) {
+      font-size: 2.5rem;
+    }
   }
 
   div {
@@ -51,8 +55,27 @@ export const Container = styled.div`
     .heroDescription {
       display: block;
 
+      strong {
+        display: block;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        color: var(--blue-active);
+        font-weight: bold;
+        font-size: 1.4rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        color: var(--black-600);
+        font-weight: 900;
+
+        .addIcon {
+          margin-right: 0.5rem;
+        }
+      }
+
       p {
-        height: 12rem;
         display: block;
         width: 70%;
 
@@ -65,27 +88,40 @@ export const Container = styled.div`
         }
 
         font-size: 1.125rem;
+      }
+    }
+  }
 
-        strong {
-          display: block;
-          margin-bottom: 1rem;
-          text-transform: uppercase;
-          color: var(--blue-active);
-          font-weight: bold;
-          font-size: 1.4rem;
-        }
+  @media(max-width: 992px) {
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-        a {
-          display: flex;
-          align-items: center;
-          color: var(--black-600);
-          font-weight: 900;
-          margin-top: 2.2rem;
+    img {
+      margin: 0 auto !important;
+      padding: 0 !important;
+    }
 
-          .addIcon {
-            margin-right: 0.5rem;
-          }
-        }
+    .heroDescription {
+      max-width: 80%;
+      margin: 0 auto;
+
+      p, strong, a {
+        width: 80% !important;
+        margin: 0 auto !important;
+      }
+
+      strong {
+        margin-bottom: 1rem !important;
+      }
+
+      p {
+        padding: 0;
+        text-align: left !important;
+        margin-bottom: 2rem !important;
       }
     }
   }

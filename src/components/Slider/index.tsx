@@ -25,7 +25,7 @@ export function Slider() {
         settings: {
           slidesToShow: 2,
           centerMode: true,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
         },
       },
       {

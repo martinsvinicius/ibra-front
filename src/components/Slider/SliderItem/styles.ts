@@ -67,6 +67,13 @@ export const ImageContainer = styled.div`
       }
     }
 
+    @media(max-width: 375px) {
+      img {
+        width: 240px;
+        height: 240px;
+      }
+    }
+
     span {
       position: absolute;
       color: #ffffff;
@@ -76,10 +83,11 @@ export const ImageContainer = styled.div`
       left: 0;
       text-align: center;
       width: 100%;
-      background: rgba(0, 150, 216, 0.7);
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
       bottom: 0;
-      padding: 20px 0;
+      /* padding: 20px 0; */
+
+      transition: all .2s;
 
       img {
         max-height: 40px;
@@ -87,72 +95,3 @@ export const ImageContainer = styled.div`
     }
   }
 `;
-
-// export const ImageContainer = styled.div`
-//   position: relative;
-
-//   img#user-img {
-//     margin: 0 auto;
-//     border-radius: 50%;
-//     max-width: 80%;
-//     height: auto;
-//   }
-
-//   img#user-linkedin {
-//     border-radius: 120px;
-//   }
-
-//   button {
-//     position: absolute;
-//     bottom: -54.5%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     -ms-transform: translate(-50%, -50%);
-//   }
-// `;
-
-// export const ImageContainer = styled.div`
-// //   display: block;
-// //   border-radius: 50%;
-// //   width: 80%;
-// //   min-height: 300px;
-// //   position: relative;
-
-// //   background: url('https://avatars.githubusercontent.com/u/49157711?v=4');
-// //   background-repeat: no-repeat;
-// //   background-size: cover;
-// //   background-position: center;
-
-// //   &::before {
-// //     content: '';
-// //     height: 80px;
-// //     transform: translateX(0%);
-// //     left: 35%;
-
-// //     margin-bottom: -1.2px;
-
-// //     background: transparent;
-// //     background: url("assets/images/linkedin-bg.svg") no-repeat;
-// //     background-position: center;
-// //     background-size: 600px 90px;
-// //     width: 100%;
-
-// //     border-radius: 50%;
-// //     position: absolute;
-// //     bottom: 0;
-// //     left: 0;
-// //   }
-// // `;
-
-// // // &::before {
-// // //   content: 'teste';
-// // //   height: 3px;
-
-// // //   background: var(--blue-active);
-// // //   width: 100%;
-
-// // //   position: absolute;
-// // //   bottom: 1px;
-// // //   left: 0;
-// // // }
-// `;

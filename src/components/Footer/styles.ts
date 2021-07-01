@@ -38,7 +38,7 @@ export const FooterContent = styled.div`
     padding: 1.5rem 3rem;
 
     img {
-        width: 10rem;
+        width: 11rem;
         height: 12rem;
     }
 
@@ -71,10 +71,11 @@ export const Description = styled.div`
     strong {
         color: var(--blue-active);
         font-weight: 700;
+        font-size: 18px;
     }
 
     p {
-        margin-top: 1rem;
+        margin: 1rem 0 2rem;
         text-align: justify;
         color: var(--gray-100);
 
