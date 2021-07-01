@@ -17,6 +17,12 @@ export const Container = styled.footer`
         display: block;
         margin: 0 auto;
         width: 40px;
+        
+        transition: all .2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     @media (max-width: 940px) {
