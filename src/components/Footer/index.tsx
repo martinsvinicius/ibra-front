@@ -136,7 +136,7 @@ export default function Footer() {
 
       <hr />
 
-      <a id="linkedinFooterLogo" href="https://www.figma.com/file/NiMfw34Lur2maq73JFddem/IBRA?node-id=291%3A0" target="_blank"><img src="assets/icons/linkedin.svg" alt="" /></a>
+      <a id="linkedinFooterLogo" href="https://www.linkedin.com/company/ibra-ai/" target="_blank"><img src="assets/icons/linkedin.svg" alt="" /></a>
     </Container>
   );
 };

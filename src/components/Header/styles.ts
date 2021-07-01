@@ -44,8 +44,31 @@ export const StyledHeader = styled.header`
       }
     }
   }
+
+  @media(max-width: 992px) {
+    div.links-container {
+      a.styled-link {
+        padding-left: 0 !important;
+        font-size: 1.2rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 `;
 
 export const LogginButtonContainer = styled.div`
   margin-left: auto;
+
+  @media(max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1rem;
+  }
 `;

@@ -17,8 +17,9 @@ export default function Hero() {
           </div>
 
           <div className="heroDescription">
+            <strong>consectetur adipiscing elit</strong>
+
             <p>
-              <strong>consectetur adipiscing elit</strong>
               Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, sed
               do eiusmod tempor incididunt ut labore et dolore
               <span>
@@ -27,11 +28,12 @@ export default function Hero() {
               </span>
               . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
-              <a href="#">
-                <IoMdAddCircle size={40} color="#3EAEE0" className="addIcon" />
-                Duis aute irure
-              </a>
             </p>
+
+            <a href="#">
+              <IoMdAddCircle size={40} color="#3EAEE0" className="addIcon" />
+              Duis aute irure
+            </a>
           </div>
         </div>
       </section>

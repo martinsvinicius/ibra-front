@@ -16,7 +16,11 @@ export const Container = styled.div`
   margin-top: 4rem;
 
   @media (max-width: 780px) {
-    margin-top: 8rem;
+    margin-top: 4rem;
+  }
+
+  @media(max-width: 375px) {
+    margin-top: 1rem;
   }
 
   &:hover {

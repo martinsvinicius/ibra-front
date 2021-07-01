@@ -9,12 +9,23 @@ export const Container = styled.div`
   margin: 0 auto;
 
   div {
-    min-height: 570px;
+    height: 570px;
   }
 
-  @media(max-width: 980px) {
+  @media(max-width: 992px) {
     div {
-      min-height: 400px;
+      height: 450px;
+    }
+
+    padding: 1rem;
+  }
+
+  @media(max-width: 500px) {
+    div {
+      height: 200px !important;
+      video {
+        max-height: 200px;
+      }
     }
   }
 
