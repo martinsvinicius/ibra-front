@@ -1,20 +1,29 @@
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
-  background: #ffffff;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 
   a.styled-link {
-    font-weight: bold;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.05rem;
 
-    color: var(--gray-200);
+    color: var(--gray-200) !important;
 
     transition: all 0.2s;
 
     &:hover {
       color: var(--blue-active) !important;
+    }
+  }
+
+  a#get-started-link {
+    text-transform: uppercase;
+    color: var(--blue-active) !important;
+    font-weight: bold;
+  
+    &:hover {
+      transform: scale(1.1);
     }
   }
 

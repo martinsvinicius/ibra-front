@@ -24,9 +24,9 @@ export function VideoPlayer() {
   return (
     <Container onClick={handlePlayPause}>
       <ReactPlayer
-        url="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+        url="https://www.youtube.com/watch?v=gOf_MMhuYpA"
         playing={playing}
-        light={'assets/images/video-thumbnail.png'}
+        light={'assets/images/video-thumbnail.jpeg'}
         playIcon={<Icon />}
         width="100%"
         controls={true}

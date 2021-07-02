@@ -7,11 +7,17 @@ import AccordionCard from './AccordionCard';
 
 import { Container, FooterContent, Description, LinksList, AccordionLinksList } from './styles';
 
-export default function Footer() {
+interface FooterPorps {
+  background?: string;
+}
+
+export default function Footer({ background }: FooterPorps) {
   const [currentActive, setCurrentActive] = useState<string | null >(null);
 
+  const bgColor = background ? background : '#FFFFFF';
+
   return (
-    <Container>
+    <Container style={{ backgroundColor: bgColor }}>
       <FooterContent>
         <img src="assets/images/logo.png" alt="Ibra" />
 

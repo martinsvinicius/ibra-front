@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import Header from '../../components/Header';
 
 import Hero from '../../components/HeroSection';
@@ -30,12 +31,18 @@ type Inputs = {
 }
 
 export default function Home() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const { register, handleSubmit, watch, formState: {isDirty, isValid} } = useForm<Inputs>({
+    mode: 'onChange'
+  });
+
   const onSubmit: SubmitHandler<Inputs> = data => {
     console.log(data);
+    toast.success('Enviado!', {
+      style: {
+        backgroundColor: '#0096D8'
+      }
+    })
   }
-
-  
 
   return (
     <Container>
@@ -143,7 +150,7 @@ export default function Home() {
 
             <input placeholder="Cargo" type="text" {...register("role", { required: true })} autoComplete="off" />
 
-            <input placeholder="Telefone com DDI e DDD" type="text" {...register("telephone", { required: true })} autoComplete="off" />
+            <input placeholder="Telefone com DDI e DDD" type="number" {...register("telephone", { required: true })} autoComplete="off" />
 
             <textarea placeholder="Mensagem" cols={30} rows={30} {...register("message")}></textarea>
 
@@ -154,7 +161,7 @@ export default function Home() {
 
             <p>Seu consentimento é necessário para garantir o correto uso da privacidade e viabilizar a comunicação direta entre você e a IBRA.</p>
           
-            <button type="submit">ENVIAR</button>
+            <button type="submit" disabled={!isDirty || !isValid}>ENVIAR</button>
           </form>
         </FormContent>
       </FormSection>

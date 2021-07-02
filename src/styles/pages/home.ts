@@ -244,7 +244,7 @@ export const FormContent = styled.section`
 
     width: 100%;
 
-    input[type=text], textarea {
+    input[type=text], textarea, input[type=number] {
       height: 3rem;
 
       width: 90%;

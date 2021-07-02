@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.footer`
     width: 100%;
-    background: #ffffff;
     padding-bottom: 2rem;
 
     hr {
         background-color: #F2F2F2;
 
-        @media (max-width: 940px) {
+        @media (max-width: 1035px) {
             margin-top: 0;
         }
     }
@@ -25,7 +24,7 @@ export const Container = styled.footer`
         }
     }
 
-    @media (max-width: 940px) {
+    @media (max-width: 1035px) {
         img, a#linkedinFooterLogo {
             width: 25px;
             height: 25px;
@@ -52,15 +51,16 @@ export const FooterContent = styled.div`
         display: flex;
         justify-content: space-between;
 
-        @media (max-width: 940px) {
+        @media (max-width: 1035px) {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
     }
 
-    @media (max-width: 940px) {
+    @media (max-width: 1035px) {
         display: flex;
         flex-direction: column;
 
@@ -89,12 +89,14 @@ export const Description = styled.div`
             color: var(--blue-active);
         }
 
-        @media (max-width: 940px) {
+        @media (max-width: 1035px) {
             text-align: center;
+            width: 80%;
+            margin: 1rem auto 2rem;
         }
     }
 
-    @media (max-width: 940px) {
+    @media (max-width: 1035px) {
         margin-top: 4rem;
     }
 `;
@@ -112,7 +114,7 @@ export const LinksList = styled.ul`
         margin-bottom: 1rem;
     }
 
-    @media (max-width: 940px) {
+    @media (max-width: 1035px) {
         display: none;
     }
 `;
@@ -121,12 +123,13 @@ export const AccordionLinksList = styled.div`
     display: none !important;
     width: 100%;
     
-    @media (max-width: 940px) {
+    @media (max-width: 1035px) {
         display: flex !important;
         flex-direction: column;
     }
 
     div.accordion {
         width: 100%;
+        cursor: pointer;
     }
 `;

@@ -1,17 +1,26 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import Link from 'next/link';
 
 import { LogginButtonContainer, StyledHeader } from './styles'
 
 import LoginButton from '../LoginButton';
 
-export default function Header() {
+interface HeaderProps {
+  background?: string;
+}
+
+export default function Header({ background }: HeaderProps) {
+  const bgColor = background ? background : '#FFFFFF';
+
   return (
-    <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+    <StyledHeader style={{ backgroundColor: bgColor }}>
+      <Navbar style={{ backgroundColor: bgColor }} collapseOnSelect expand="lg" variant="light">
         <Container>
-          <Navbar.Brand href="#">
-            <img id="ibra-logo" src="assets/images/logo.png" alt="Ibra" />
-          </Navbar.Brand>
+          <Link href="/">
+            <Navbar.Brand>
+              <img id="ibra-logo" src="assets/images/logo.png" alt="Ibra" />
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="justify-content-center" id="responsive-navbar-nav">
             <Nav className="me-auto links-container">
@@ -19,10 +28,11 @@ export default function Header() {
               <Nav.Link className="styled-link" href="#advantages">Vantagens</Nav.Link>
               <Nav.Link className="styled-link" href="#video">Vídeos</Nav.Link>
               <Nav.Link className="styled-link" href="#slider">Liderança</Nav.Link>
-              <Nav.Link className="styled-link" href="#cases">Cases</Nav.Link>
               <Nav.Link className="styled-link" href="#contact-us">Fale conosco</Nav.Link>
+              <Link href="/product">
+                <a id="get-started-link" className="styled-link nav-link">Começar</a>
+              </Link>
             </Nav>
-
             <LogginButtonContainer>
               <LoginButton />
             </LogginButtonContainer>
@@ -32,23 +42,3 @@ export default function Header() {
     </StyledHeader>
   );
 }
-
-
-    // <Container>
-    //   <HeaderContent>
-    //     <img src="assets/images/logo.png" alt="Ibra" />
-
-    //     <Nav>
-    //       <ul>
-    //         <li><a href="#">Quem somos</a></li>
-    //         <li><a href="#advantages">Vantagens</a></li>
-    //         <li><a href="#">Vídeos</a></li>
-    //         <li><a href="#slider">Liderança</a></li>
-    //         <li><a href="#">Cases</a></li>
-    //         <li><a href="#">Fale conosco</a></li>
-    //       </ul>
-
-    //       <LoginButton />
-    //     </Nav>
-    //   </HeaderContent>
-    // </Container>
