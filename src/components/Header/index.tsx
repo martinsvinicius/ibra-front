@@ -26,9 +26,9 @@ export default function Header({ background }: HeaderProps) {
             <Nav className="me-auto links-container">
               <Nav.Link className="styled-link" href="#quem-somos">Quem somos</Nav.Link>
               <Nav.Link className="styled-link" href="#advantages">Vantagens</Nav.Link>
+              <Nav.Link className="styled-link" href="#contact-us">Fale conosco</Nav.Link>
               <Nav.Link className="styled-link" href="#video">Vídeos</Nav.Link>
               <Nav.Link className="styled-link" href="#slider">Liderança</Nav.Link>
-              <Nav.Link className="styled-link" href="#contact-us">Fale conosco</Nav.Link>
               <Link href="/product">
                 <a id="get-started-link" className="styled-link nav-link">Começar</a>
               </Link>

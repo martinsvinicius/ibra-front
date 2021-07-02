@@ -104,6 +104,10 @@ export const Advantage = styled.div`
         border-radius: 1rem;
       }
     }
+
+    div.advantageDescription:last-child {
+      margin: 2rem 0;
+    }
   }
 `;
 
