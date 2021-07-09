@@ -1,4 +1,4 @@
-import { FormEvent } from 'react';
+import { FormEvent, useEffect } from 'react';
 
 import { Container, Content } from '../../styles/pages/product';
 
@@ -31,19 +31,39 @@ export default function GetStarted() {
   const [status, setStatus] = useState<Status>({
     privacyInvasion: {
       score: 0,
-      title: 'MÉDIA',
+      title: isEnglish ? 'AVERAGE' : 'MÉDIA',
     },
     publicFigure: {
       score: 0,
-      title: 'NÃO É FIGURA PÚBLICA',
+      title: isEnglish ? `IT'S NOT PUBLIC FIGURE` : 'NÃO É FIGURA PÚBLICA',
     },
     publicInterest: {
       score: 0,
-      title: 'GRANDE',
+      title: isEnglish ? 'HIGHER' : 'GRANDE',
     },
   });
 
-  const finalScore = status.privacyInvasion.score + status.publicFigure.score + status.publicInterest.score;
+  useEffect(() => {
+    setStatus({
+      privacyInvasion: {
+        score: 0,
+        title: isEnglish ? 'AVERAGE' : 'MÉDIA',
+      },
+      publicFigure: {
+        score: 0,
+        title: isEnglish ? `IT'S NOT PUBLIC FIGURE` : 'NÃO É FIGURA PÚBLICA',
+      },
+      publicInterest: {
+        score: 0,
+        title: isEnglish ? 'HIGHER' : 'GRANDE',
+      },
+    });
+  }, [language]);
+
+  const finalScore =
+    status.privacyInvasion.score +
+    status.publicFigure.score +
+    status.publicInterest.score;
 
   function handlSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,15 +71,15 @@ export default function GetStarted() {
     const newStatus: Status = {
       privacyInvasion: {
         score: Math.random() * 100,
-        title: 'MÉDIA',
+        title: isEnglish ? 'AVERAGE' : 'MÉDIA',
       },
       publicFigure: {
         score: Math.random() * 100,
-        title: 'NÃO É FIGURA PÚBLICA',
+        title: isEnglish ? `IT'S NOT PUBLIC FIGURE` : 'NÃO É FIGURA PÚBLICA',
       },
       publicInterest: {
         score: Math.random() * 100,
-        title: 'GRANDE',
+        title: isEnglish ? 'HIGHER' : 'GRANDE',
       },
     };
 
@@ -68,14 +88,15 @@ export default function GetStarted() {
 
   //english site version
   if (isEnglish) {
-    return(
+    return (
       <Container>
         <Header background="#F8F8F8" />
 
         <Content>
           <div className="comment">
             <h1>
-              We exist to <span className="blue-200">protect</span> your company and <span className="blue-active">your clients</span>
+              We exist to <span className="blue-200">protect</span> your company
+              and <span className="blue-active">your clients</span>
             </h1>
 
             <form onSubmit={(e) => handlSubmit(e)}>
@@ -115,8 +136,10 @@ export default function GetStarted() {
               />
 
               <p>
-                The comment has been removed {' '}
-                <span className="blue-active">as it isn't about a public figure and it invades privacy</span>
+                The comment has been removed{' '}
+                <span className="blue-active">
+                  as it isn't about a public figure and it invades privacy
+                </span>
               </p>
             </div>
           </div>
@@ -135,7 +158,8 @@ export default function GetStarted() {
       <Content>
         <div className="comment">
           <h1>
-            Nós existimos para <span className="blue-200">proteger</span> sua empresa e <span className="blue-active">seus clientes</span>
+            Nós existimos para <span className="blue-200">proteger</span> sua
+            empresa e <span className="blue-active">seus clientes</span>
           </h1>
 
           <form onSubmit={(e) => handlSubmit(e)}>
