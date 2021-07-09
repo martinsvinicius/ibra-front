@@ -16,6 +16,12 @@ export const Container = styled(Card)<ContainerProps>`
         color: #fff;
         font-weight: 600;
         font-size: 1.5rem;
+
+        transition: all .2s;
+
+        &:hover {
+            background: var(--blue-300) !important;
+        }
     }
 
     ul {

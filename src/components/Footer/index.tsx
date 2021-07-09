@@ -7,12 +7,18 @@ import AccordionCard from './AccordionCard';
 
 import { Container, FooterContent, Description, LinksList, AccordionLinksList } from './styles';
 
-export default function Footer() {
+interface FooterPorps {
+  background?: string;
+}
+
+export default function Footer({ background }: FooterPorps) {
   const [currentActive, setCurrentActive] = useState<string | null >(null);
 
+  const bgColor = background ? background : '#FFFFFF';
+
   return (
-    <Container>
-      <FooterContent>
+    <Container style={{ backgroundColor: bgColor }}>
+      {/* <FooterContent>
         <img src="assets/images/logo.png" alt="Ibra" />
 
         <div>
@@ -132,10 +138,9 @@ export default function Footer() {
             </Accordion>
           </AccordionLinksList>
         </div>
-      </FooterContent>
+      </FooterContent> */}
 
-      <hr />
-
+      <br />    
       <a id="linkedinFooterLogo" href="https://www.linkedin.com/company/ibra-ai/" target="_blank"><img src="assets/icons/linkedin.svg" alt="" /></a>
     </Container>
   );

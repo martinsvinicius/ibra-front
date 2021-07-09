@@ -1,54 +1,73 @@
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import Link from 'next/link';
 
 import { LogginButtonContainer, StyledHeader } from './styles'
 
 import LoginButton from '../LoginButton';
+import { useLanguage } from '../../hooks/useLanguage';
 
-export default function Header() {
+interface HeaderProps {
+  background?: string;
+}
+
+export default function Header({ background }: HeaderProps) {
+  const bgColor = background ? background : '#FFFFFF';
+  const { language, handleChangeLanguage } = useLanguage();
+
+  const isEnglish = language === 'en';
+
   return (
-    <StyledHeader>
-      <Navbar collapseOnSelect expand="lg" bg="white" variant="light">
+    <StyledHeader style={{ backgroundColor: bgColor }}>
+      <Navbar
+        style={{ backgroundColor: bgColor }}
+        collapseOnSelect
+        expand="lg"
+        variant="light"
+      >
         <Container>
-          <Navbar.Brand href="#">
-            <img id="ibra-logo" src="assets/images/logo.png" alt="Ibra" />
-          </Navbar.Brand>
+          <Link href="/">
+            <Navbar.Brand>
+              <img id="ibra-logo" src="assets/images/logo.png" alt="Ibra" />
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse className="justify-content-center" id="responsive-navbar-nav">
+          <Navbar.Collapse
+            className="justify-content-center"
+            id="responsive-navbar-nav"
+          >
             <Nav className="me-auto links-container">
-              <Nav.Link className="styled-link" href="#">Quem somos</Nav.Link>
-              <Nav.Link className="styled-link" href="#advantages">Vantagens</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Vídeos</Nav.Link>
-              <Nav.Link className="styled-link" href="#slider">Liderança</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Cases</Nav.Link>
-              <Nav.Link className="styled-link" href="#">Fale conosco</Nav.Link>
+              {/* <Nav.Link className="styled-link" href="#quem-somos">
+                {isEnglish ? 'About us' : 'Quem somos'}
+              </Nav.Link> */}
+              <Nav.Link className="styled-link" href="/#advantages">
+                {isEnglish ? 'Advantages' : 'Vantagens'}
+              </Nav.Link>
+              <Nav.Link className="styled-link" href="/#contact-us">
+                {isEnglish ? 'Contact us' : 'Fale conosco'}
+              </Nav.Link>
+              <Nav.Link className="styled-link" href="/#video">
+                {isEnglish ? 'Videos' : 'Vídeos'}
+              </Nav.Link>
+              <Nav.Link className="styled-link" href="/#slider">
+                {isEnglish ? 'Leadership ' : 'Liderança'}
+              </Nav.Link>
+              <Link href="/get-started">
+                <a id="get-started-link" className="styled-link nav-link">
+                  {isEnglish ? 'GET STARTED' : 'COMEÇAR'}
+                </a>
+              </Link>
+              <Nav.Link className="language-switch">
+                <button className={isEnglish ? '' : 'active'} onClick={handleChangeLanguage}>PT</button>
+                <span className="circle"></span>
+                <button className={isEnglish ? 'active' : ''} onClick={handleChangeLanguage}>EN</button>
+              </Nav.Link>
             </Nav>
-
-            <LogginButtonContainer>
+            {/* <LogginButtonContainer>
               <LoginButton />
-            </LogginButtonContainer>
+            </LogginButtonContainer> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </StyledHeader>
   );
 }
-
-
-    // <Container>
-    //   <HeaderContent>
-    //     <img src="assets/images/logo.png" alt="Ibra" />
-
-    //     <Nav>
-    //       <ul>
-    //         <li><a href="#">Quem somos</a></li>
-    //         <li><a href="#advantages">Vantagens</a></li>
-    //         <li><a href="#">Vídeos</a></li>
-    //         <li><a href="#slider">Liderança</a></li>
-    //         <li><a href="#">Cases</a></li>
-    //         <li><a href="#">Fale conosco</a></li>
-    //       </ul>
-
-    //       <LoginButton />
-    //     </Nav>
-    //   </HeaderContent>
-    // </Container>

@@ -49,7 +49,6 @@ export const ImageContainer = styled.div`
   div {
     position: relative;
     padding: 0;
-    cursor: pointer;
 
     display: inline-block;
     overflow: hidden;
@@ -77,6 +76,7 @@ export const ImageContainer = styled.div`
     span {
       position: absolute;
       color: #ffffff;
+      cursor: pointer;
 
       border-radius: 50%;
 
@@ -91,6 +91,10 @@ export const ImageContainer = styled.div`
 
       img {
         max-height: 40px;
+        transition: all .2s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }
