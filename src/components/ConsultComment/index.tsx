@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLanguage } from '../../hooks/useLanguage';
 
 import { Container } from './styles';
 
@@ -8,6 +9,8 @@ interface ConsultCommentProps {
 
 export function ConsultComment({ inputName }: ConsultCommentProps) {
   const [iconBrightness, setIconBrightness] = useState(1);
+  const { language } = useLanguage();
+  const isEnglish = language === 'en';
 
   return (
     <Container id="#consultContainer">
@@ -16,7 +19,7 @@ export function ConsultComment({ inputName }: ConsultCommentProps) {
         onFocus={() => setIconBrightness(0.8)}
         onBlur={() => setIconBrightness(1)}
         name={inputName ? inputName : 'comment'}
-        placeholder="Consultar comentário"
+        placeholder={isEnglish ? 'Comment consultation' : 'Consultar comentário'}
       />
       
       <button type="submit">

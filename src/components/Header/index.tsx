@@ -62,9 +62,9 @@ export default function Header({ background }: HeaderProps) {
                 <button className={isEnglish ? 'active' : ''} onClick={handleChangeLanguage}>EN</button>
               </Nav.Link>
             </Nav>
-            <LogginButtonContainer>
+            {/* <LogginButtonContainer>
               <LoginButton />
-            </LogginButtonContainer>
+            </LogginButtonContainer> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

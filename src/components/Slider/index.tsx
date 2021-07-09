@@ -1,6 +1,7 @@
 import SlickSlider from 'react-slick';
 
 import { Settings } from 'react-slick';
+import { useLanguage } from '../../hooks/useLanguage';
 import { NextArrow } from './NextArrow';
 import { PrevArrow } from './PrevArrow';
 import { SliderItem } from './SliderItem';
@@ -39,56 +40,72 @@ export function Slider() {
     ],
   };
 
+  const { language } = useLanguage();
+
+  const isEnglish = language === 'en';
+
   return (
     <Container id="slider">
-      <h2>
-        Lorem <span className="light">ipsum</span> dolor{' '}
-        <span className="strong">sit amet</span>
-      </h2>
+      <h2>{isEnglish ? 'Who we are?' : 'Quem somos?'}</h2>
 
       <SlickSlider {...settings}>
         <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/49157711?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGRVrKHeoYn8g/profile-displayphoto-shrink_200_200/0/1603903071556?e=1631145600&v=beta&t=ioMar4w_jadHEL7Y0xrMreQdxCqAdwNHYHasKk3wANg"
+          title="Thomas Palmeira Ferraz"
+          description="Passionate AI Researcher and Machine Learning Engineer who believes that the technology exists to generate a positive impact on the world and solve the problems of society."
+          linkedInUrl="https://www.linkedin.com/in/thomasferraz/"
+          portfolioUrl="https://github.com/thomas-ferraz"
         />
 
-        <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/2254731?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        <SliderItem 
+          imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGLZNyKw2aPSg/profile-displayphoto-shrink_200_200/0/1619876858238?e=1631145600&v=beta&t=Lr2TbLkGcaiG8BX6UC-LJm--_iNpTaSVsEZDaThkCd0"
+          title="Maria Fernanda Ribeiro"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          linkedInUrl="https://www.linkedin.com/in/maria-fernanda-ribeiro-mfr95/"
         />
 
-        <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/2254731?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        <SliderItem 
+          imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQFb8bSggFCxJQ/profile-displayphoto-shrink_200_200/0/1566580951581?e=1631145600&v=beta&t=XaUiONf0Lv-LXNXh0jryi6gVElmzqy7rVn3kk1HFzGk"
+          title="Gabriel Goes Braga Takayanagi"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          linkedInUrl="https://www.linkedin.com/in/gabriel-takayanagi/"
         />
 
-        <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/2254731?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        <SliderItem 
+          imageSource="assets/images/Caio-henrique.png"
+          title="Caio Henrique Dias Duarte"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          linkedInUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
+          portfolioUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
         />
 
-        <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/2254731?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        <SliderItem 
+          imageSource="assets/images/Mart-susi.jpg"
+          title="Mart Susi"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
+          portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
         />
 
-        <SliderItem
-          imageSource="https://avatars.githubusercontent.com/u/2254731?v=4"
-          title="Lorem ipsum Dolor sit"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-            do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        <SliderItem 
+          imageSource="https://media-exp3.licdn.com/dms/image/C5103AQFUrgJJ1X83AQ/profile-displayphoto-shrink_200_200/0/1517521355286?e=1631145600&v=beta&t=4gJ_aZqX27iGUkrFbCKU7ouAf85n1w1vmrlQYG4xes8"
+          title="Roseli Lopes"
+          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          linkedInUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
+          portfolioUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
         />
       </SlickSlider>
     </Container>
   );
 }
+
+/* <SliderItem
+  imageSource="url da imagem"
+  title="nome da pessoa"
+  description="breve descrição"
+  linkedInUrl="url do perfil do linkedin"
+  portfolioUrl="url do seu portfolio"
+/> 
+
+  ATALHO VSCODE - CTRL + ESPAÇO
+*/

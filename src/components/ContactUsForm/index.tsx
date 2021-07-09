@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { useLanguage } from "../../hooks/useLanguage";
 import { emailjsApi, EmailjsParams } from "../../services/emailjs";
 import { StyledForm } from "./styles";
 
@@ -15,6 +16,10 @@ type Inputs = {
 }
 
 export function ContactUsForm() {
+  const { language } = useLanguage();
+
+  const isEnglish = language === 'en';
+
   const { register, reset, handleSubmit, watch, formState: {isDirty, isValid} } = useForm<Inputs>({
     mode: 'onChange'
   });
@@ -55,24 +60,28 @@ export function ContactUsForm() {
 
   return (
   <StyledForm onSubmit={handleSubmit(onSubmit)}>
-    <input placeholder="Nome" type="text" {...register("name", { required: true })} />
+    <input placeholder={isEnglish ? 'Name' : 'Nome'} type="text" {...register("name", { required: true })} />
 
-    <input placeholder="Email Corporativo" type="text" {...register("email", { required: true })} />
+    <input placeholder={isEnglish ? 'Email' : 'Email Corporativo'} type="text" {...register("email", { required: true })} />
 
-    <input placeholder="Empresa" type="text" {...register("company", { required: true })} autoComplete="off" />
+    <input placeholder={isEnglish ? 'Company' : 'Empresa'} type="text" {...register("company", { required: true })} autoComplete="off" />
 
-    <input placeholder="Cargo" type="text" {...register("role", { required: true })} autoComplete="off" />
+    <input placeholder={isEnglish ? 'Position' : 'Cargo'} type="text" {...register("role", { required: true })} autoComplete="off" />
 
-    <input placeholder="Telefone com DDI e DDD" type="number" {...register("telephone", { required: true })} autoComplete="off" />
+    <input placeholder={isEnglish ? 'Telephone number' : 'Telefone com DDI e DDD'} type="number" {...register("telephone", { required: true })} autoComplete="off" />
 
-    <textarea placeholder="Mensagem" cols={30} rows={30} {...register("message")}></textarea>
+    <textarea placeholder={isEnglish ? 'Message' : 'Mensagem'} cols={30} rows={30} {...register("message")}></textarea>
 
     <div className="checkbox-container">
       <input type="checkbox" {...register("policyAccepted", { required: true })} />
-      <span>Eu li e aceito a Política de Privacidade da IBRA</span>
+      <span>{isEnglish ? `I've read and accept the IBF Privacy Policy.` : 'Eu li e aceito a Política de Privacidade da IBRA'}</span>
     </div>
 
-    <p>Seu consentimento é necessário para garantir o correto uso da privacidade e viabilizar a comunicação direta entre você e a IBRA.</p>
+    {
+      !isEnglish 
+      ? (<p>Seu consentimento é necessário para garantir o correto uso da privacidade e viabilizar a comunicação direta entre você e a IBRA.</p>) 
+      : <br />
+    }
 
     <button type="submit" disabled={!isDirty || !isValid || isLoading}>ENVIAR</button>
   </StyledForm>

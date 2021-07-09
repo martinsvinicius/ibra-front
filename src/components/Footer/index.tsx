@@ -18,7 +18,7 @@ export default function Footer({ background }: FooterPorps) {
 
   return (
     <Container style={{ backgroundColor: bgColor }}>
-      <FooterContent>
+      {/* <FooterContent>
         <img src="assets/images/logo.png" alt="Ibra" />
 
         <div>
@@ -138,10 +138,9 @@ export default function Footer({ background }: FooterPorps) {
             </Accordion>
           </AccordionLinksList>
         </div>
-      </FooterContent>
+      </FooterContent> */}
 
-      <hr />
-
+      <br />    
       <a id="linkedinFooterLogo" href="https://www.linkedin.com/company/ibra-ai/" target="_blank"><img src="assets/icons/linkedin.svg" alt="" /></a>
     </Container>
   );
