@@ -35,8 +35,6 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-          <title>IBRA</title>
-
           <link
             rel="stylesheet"
             type="text/css"

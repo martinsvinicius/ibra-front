@@ -67,6 +67,39 @@ export const StyledHeader = styled.header`
       justify-content: center;
     }
   }
+
+  .language-switch {
+    display: flex;
+    align-items: center;
+
+    button {
+      border: 0;
+      font-weight: 400;
+      background: transparent;
+      font-size: 1.05rem;
+      color: var(--gray-200);
+
+      transition: all .2s;
+
+      &.active {
+        color: #69B2E2;
+        font-weight: bold;
+      }
+
+      &:hover {
+        filter: brightness(.9);
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin: 0 10px;
+      height: 5px;
+      width: 5px;
+      background: #9FC9F0;
+      border-radius: 50%;
+    }
+  }
 `;
 
 export const LogginButtonContainer = styled.div`

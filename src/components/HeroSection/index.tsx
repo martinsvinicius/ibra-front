@@ -1,14 +1,60 @@
 import { Container, Wave } from './styles';
 
 import { IoMdAddCircle } from 'react-icons/io';
+import { useLanguage } from '../../hooks/useLanguage';
 
 export default function Hero() {
+  const { language } = useLanguage();
+
+  const isEnglish = language === 'en';
+
+  //english site version
+  if (isEnglish) {
+    return (
+      <Container>
+        <section>
+          <h2>
+            We exist to <span>protect</span> your <br /> company and{' '}
+            <span>your clients</span>
+          </h2>
+
+          <div>
+            <div className="heroImageContainer">
+              <img src="assets/icons/hero.svg" alt="Hero image" />
+            </div>
+
+            <div className="heroDescription">
+              <strong>
+                Creating a custom made solution to content moderation
+              </strong>
+
+              <p>
+                The Internet Balancing Formula provides a clear and transparent
+                moderation process for companies that need to deal with big
+                quantities of comments and interaction, centralizing social
+                networks for a faster response.
+              </p>
+
+              <a href="#">
+                <IoMdAddCircle size={40} color="#3EAEE0" className="addIcon" />
+                Now more
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <Wave />
+      </Container>
+    );
+  }
+
+  //portuguese site version
   return (
     <Container>
       <section>
         <h2>
-          We <span>exist</span> to protect your <br /> company and
-          <span> your clients</span>
+          Nós existimos para <span>proteger</span> sua <br /> empresa e{' '}
+          <span>seus clientes</span>
         </h2>
 
         <div>
@@ -17,22 +63,19 @@ export default function Hero() {
           </div>
 
           <div className="heroDescription">
-            <strong>consectetur adipiscing elit</strong>
+            <strong>
+              Criando uma solução sob medida para a moderação de conteúdo
+            </strong>
 
             <p>
-              Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore
-              <span>
-                {' '}
-                <b>magna aliqua</b>
-              </span>
-              . Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Com a IBRA, sua empresa pode ter uma moderação de conteúdo clara e
+              transparente, centralizando grandes quantidades de conteúdo e
+              perfis em diferentes redes sociais para uma resposta rápida.
             </p>
 
             <a href="#">
               <IoMdAddCircle size={40} color="#3EAEE0" className="addIcon" />
-              Duis aute irure
+              Saiba mais
             </a>
           </div>
         </div>
