@@ -71,6 +71,7 @@ export const StyledHeader = styled.header`
   .language-switch {
     display: flex;
     align-items: center;
+    padding: 0 !important;
 
     button {
       border: 0;
