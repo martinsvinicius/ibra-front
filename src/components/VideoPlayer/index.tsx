@@ -24,7 +24,7 @@ export function VideoPlayer() {
   return (
     <Container onClick={handlePlayPause}>
       <ReactPlayer
-        url="https://www.youtube.com/watch?v=z1s37HW8Wm8&ab_channel=IBF-InternetBalancingFormula"
+        url="https://youtu.be/z5_0VYgW7lg"
         playing={playing}
         light={'assets/images/video-thumbnail.jpeg'}
         playIcon={<Icon />}
