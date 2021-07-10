@@ -63,13 +63,13 @@ export default function Home() {
               <div className="advantageNumber">1</div>
 
               <div className="advantageImage">
-                <img src="assets/images/step-1.png" alt="" />
+                <img src="assets/images/print1.png" alt="" />
               </div>
             </Advantage>
 
             <Advantage>
               <div className="advantageImage">
-                <img src="assets/images/step-1.png" alt="" />
+                <img src="assets/images/print2.png" alt="" />
               </div>
 
               <div className="advantageNumber">2</div>
@@ -178,13 +178,13 @@ export default function Home() {
             <div className="advantageNumber">1</div>
 
             <div className="advantageImage">
-              <img src="assets/images/step-1.png" alt="Lorem ipsum" />
+              <img src="assets/images/print1.png" alt="Lorem ipsum" />
             </div>
           </Advantage>
 
           <Advantage>
             <div className="advantageImage">
-              <img src="assets/images/step-1.png" alt="Lorem ipsum" />
+              <img src="assets/images/print2.png" alt="Lorem ipsum" />
             </div>
 
             <div className="advantageNumber">2</div>

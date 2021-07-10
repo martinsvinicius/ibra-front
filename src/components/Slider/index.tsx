@@ -60,26 +60,25 @@ export function Slider() {
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGLZNyKw2aPSg/profile-displayphoto-shrink_200_200/0/1619876858238?e=1631145600&v=beta&t=Lr2TbLkGcaiG8BX6UC-LJm--_iNpTaSVsEZDaThkCd0"
           title="Maria Fernanda Ribeiro"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Electrical Engineer graduated at POLI-USP and Data Scientist, she believes that technology must be always used in favor of people and society"
           linkedInUrl="https://www.linkedin.com/in/maria-fernanda-ribeiro-mfr95/"
         />
 
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQFb8bSggFCxJQ/profile-displayphoto-shrink_200_200/0/1566580951581?e=1631145600&v=beta&t=XaUiONf0Lv-LXNXh0jryi6gVElmzqy7rVn3kk1HFzGk"
           title="Gabriel Goes Braga Takayanagi"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Student in Electrical engineering, he has a love learning new concepts and understanding the world that surrounds us. Recently, with the IBRA project he has been able to make use of my passion and knowledge of Data Science to make meaningful changes in the world."
           linkedInUrl="https://www.linkedin.com/in/gabriel-takayanagi/"
         />
 
         <SliderItem 
           imageSource="assets/images/Caio-henrique.png"
           title="Caio Henrique Dias Duarte"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Caio is a long-term research in comparative legislation and philosophy of law. This interest of his materialized in the IBF, and he is keen to help apply legal principles to fruitful costumer relations."
           linkedInUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
           portfolioUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
         />
-
-        <SliderItem 
+        {/* <SliderItem 
           imageSource="assets/images/Mart-susi.jpg"
           title="Mart Susi"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
@@ -93,7 +92,7 @@ export function Slider() {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
           linkedInUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
           portfolioUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
-        />
+        /> */}
       </SlickSlider>
     </Container>
   );
