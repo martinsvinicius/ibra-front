@@ -23,7 +23,7 @@ export function ConsultComment({ inputName }: ConsultCommentProps) {
       />
       
       <button type="submit">
-        <img style={{ filter: `brightness(${iconBrightness})` }} src="assets/icons/consult-icon.svg" alt="Pesquisar" />
+        <img style={{ filter: `brightness(${iconBrightness})` }} src="assets/icons/consult-icon.svg" alt="Consult" />
       </button>
     </Container>
   );

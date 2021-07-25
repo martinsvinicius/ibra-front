@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`  
+export const Container = styled.div`
   span {
     display: inline-block;
     margin-bottom: 1rem;
@@ -31,7 +31,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 995px) {
-    width: 60%;
+    width: 100%;
 
     > span {
       text-align: center;

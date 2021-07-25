@@ -73,6 +73,8 @@ export const StyledHeader = styled.header`
     align-items: center;
     padding: 0 !important;
 
+    margin-left: 1.5rem;
+
     button {
       border: 0;
       font-weight: 400;
@@ -99,6 +101,10 @@ export const StyledHeader = styled.header`
       width: 5px;
       background: #9FC9F0;
       border-radius: 50%;
+    }
+
+    @media(max-width: 990px) {
+      margin-left: 0;
     }
   }
 `;

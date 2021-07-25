@@ -66,7 +66,7 @@ export const Content = styled.section`
       max-width: 90%;
       margin: 0 auto;
 
-      @media(max-width: 995px) {
+      @media (max-width: 995px) {
         display: flex !important;
         flex-direction: column;
         align-items: center;
@@ -82,7 +82,7 @@ export const Content = styled.section`
         }
       }
 
-      @media(max-width: 550px) {
+      @media (max-width: 550px) {
         div.statusItem {
           width: 100%;
         }
@@ -149,7 +149,7 @@ export const Content = styled.section`
         }
       }
 
-      @media(max-width: 995px) {
+      @media (max-width: 995px) {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -173,11 +173,49 @@ export const Content = styled.section`
         }
       }
 
-      @media(max-width: 550px) {
+      @media (max-width: 550px) {
         div.total {
           width: 100%;
         }
       }
+    }
+  }
+
+  .inputLabel {
+    margin-top: 1.5rem;
+    margin-left: 0.2rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #3f3d56;
+    cursor: pointer;
+
+    transition: all 0.2s;
+
+    strong {
+      color: var(--blue-active);
+
+      & + strong {
+        text-transform: uppercase;
+        color: #2e70aa;
+      }
+    }
+
+    &:hover {
+      margin-left: 0.5rem;
+    }
+  }
+
+  #emptyData {
+    margin: 4rem auto 0;
+    text-align: center;
+
+    font-weight: 500;
+  }
+
+  .large {
+    @media (max-width: 995px) {
+      width: 60%;
+      margin: 0 auto;
     }
   }
 `;

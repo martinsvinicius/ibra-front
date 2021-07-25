@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import { Container } from './styles';
 
 interface CommentStatusItemProps {
-  title: string;
+  title?: string;
   points: number;
   pointsDescription: string;
   boxColor: string;
@@ -13,7 +13,7 @@ interface CommentStatusItemProps {
 export function CommentStatusItem({ title, points, pointsDescription, boxColor, isLarge }: CommentStatusItemProps) {
   return (
     <Container className="statusItem">
-      <span>{`${title}:`}</span>
+      {Boolean(title) && <span>{`${title}:`}</span>}
       <div
         style={
           isLarge
