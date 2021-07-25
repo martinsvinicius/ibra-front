@@ -1,3 +1,4 @@
+import { useLanguage } from '../../hooks/useLanguage';
 import { Status } from '../../pages/get-started';
 import { CommentStatusItem } from '../CommentStatusItem';
 import { Container } from './styles';
@@ -11,15 +12,21 @@ interface CommentsStatusTableProps {
 }
 
 export function CommentsStatusTable({ data }: CommentsStatusTableProps) {
+  const { language } = useLanguage();
+
+  const isEnglish = language === 'en';
+
   return (
     <Container>
       <thead>
         <tr>
-          <th>Comentário</th>
-          <th>Invasão à privacidade</th>
-          <th>Nível de figura pública</th>
-          <th>Interesse Público</th>
-          <th>Pontuação Total</th>
+          <th>{isEnglish ? 'Comment' : 'Comentário'}</th>
+          <th>{isEnglish ? 'Privacy invasion ' : 'Invasão à privacidade'}</th>
+          <th>
+            {isEnglish ? 'Level of public figure' : 'Nível de figura pública'}
+          </th>
+          <th>{isEnglish ? 'Public interest' : 'Interesse Público'}</th>
+          <th>{isEnglish ? 'Final score' : 'Pontuação Total'}</th>
         </tr>
       </thead>
 
@@ -31,21 +38,21 @@ export function CommentsStatusTable({ data }: CommentsStatusTableProps) {
               <CommentStatusItem
                 points={item.status.privacyInvasion.score}
                 boxColor={'#8FDAE4'}
-                pointsDescription='TESTE'
+                pointsDescription="TESTE"
               />
             </td>
             <td>
               <CommentStatusItem
                 points={item.status.publicFigure.score}
                 boxColor={'#0096D8'}
-                pointsDescription='TESTE'
+                pointsDescription="TESTE"
               />
             </td>
             <td>
               <CommentStatusItem
                 points={item.status.publicInterest.score}
                 boxColor={'#2E70AA'}
-                pointsDescription='TESTE'
+                pointsDescription="TESTE"
               />
             </td>
             <td>
@@ -59,7 +66,11 @@ export function CommentsStatusTable({ data }: CommentsStatusTableProps) {
                 pointsDescription="@USER"
               />
 
-              <p className="commentJustification">{item.commentJustification}</p>
+              <p className="commentJustification">
+                {isEnglish
+                  ? `The comment has been removed as it isn't about a public figure and it invades privacy`
+                  : item.commentJustification}
+              </p>
             </td>
           </tr>
         ))}

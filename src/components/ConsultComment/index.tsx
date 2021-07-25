@@ -15,6 +15,7 @@ export function ConsultComment({ inputName }: ConsultCommentProps) {
   return (
     <Container id="#consultContainer">
       <input
+        id="comment-text"
         type="text"
         onFocus={() => setIconBrightness(0.8)}
         onBlur={() => setIconBrightness(1)}

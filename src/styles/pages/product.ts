@@ -208,6 +208,7 @@ export const Content = styled.section`
   #emptyData {
     margin: 4rem auto 0;
     text-align: center;
+    font-size: 1.5rem;
 
     font-weight: 500;
   }
