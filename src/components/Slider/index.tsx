@@ -124,7 +124,7 @@ else
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGLZNyKw2aPSg/profile-displayphoto-shrink_200_200/0/1619876858238?e=1631145600&v=beta&t=Lr2TbLkGcaiG8BX6UC-LJm--_iNpTaSVsEZDaThkCd0"
           title="Maria Fernanda Ribeiro"
-          description="Formada em engenharia elétrica pela POLI-USP, trabalha atualmente como Data Scientist e acredita que a tecnologia deve sempre ser usada a favor da sociedade e da população."
+          description="Formada em engenharia elétrica pela POLI-USP, trabalha atualmente como Data Scientist e acredita que a tecnologia deve sempre ser usada a favor como um todo."
           linkedInUrl="https://www.linkedin.com/in/maria-fernanda-ribeiro-mfr95/"
         />
 
