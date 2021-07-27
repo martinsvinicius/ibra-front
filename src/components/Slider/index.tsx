@@ -79,10 +79,10 @@ export function Slider() {
           linkedInUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
           portfolioUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
         />
-        {/* <SliderItem 
+         <SliderItem 
           imageSource="assets/images/Mart-susi.jpg"
           title="Mart Susi"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Mart's quest for bridging the gap between Human Rights and Technology is key to the IBFs values. He is Human Rights Professor at Tallinn University, as well as coordinator of the Global Digital Human Rights Network."
           linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
           portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
         />
@@ -90,10 +90,10 @@ export function Slider() {
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C5103AQFUrgJJ1X83AQ/profile-displayphoto-shrink_200_200/0/1517521355286?e=1631145600&v=beta&t=4gJ_aZqX27iGUkrFbCKU7ouAf85n1w1vmrlQYG4xes8"
           title="Roseli Lopes"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Roseli has a decades long experience with technology and education. One of LATAMs leading experts in the field, she is a Professor at the Integrable Systems Lab of the University of São Paulo."
           linkedInUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
           portfolioUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
-        /> */}
+        /> 
       </SlickSlider>
     </Container>
   );
