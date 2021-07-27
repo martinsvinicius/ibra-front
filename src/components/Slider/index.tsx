@@ -50,6 +50,13 @@ export function Slider() {
       <h2>{isEnglish ? 'Who we are?' : 'Quem somos?'}</h2>
 
       <SlickSlider {...settings}>
+       <SliderItem 
+          imageSource="assets/images/Mart-susi.jpg"
+          title="Mart Susi"
+          description="Mart's quest for bridging the gap between Human Rights and Technology is key to the IBFs values. He is Human Rights Professor at Tallinn University, as well as coordinator of the Global Digital Human Rights Network."
+          linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
+          portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
+        />
         <SliderItem
           imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGRVrKHeoYn8g/profile-displayphoto-shrink_200_200/0/1603903071556?e=1631145600&v=beta&t=ioMar4w_jadHEL7Y0xrMreQdxCqAdwNHYHasKk3wANg"
           title="Thomas Palmeira Ferraz"
@@ -79,13 +86,7 @@ export function Slider() {
           linkedInUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
           portfolioUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
         />
-         <SliderItem 
-          imageSource="assets/images/Mart-susi.jpg"
-          title="Mart Susi"
-          description="Mart's quest for bridging the gap between Human Rights and Technology is key to the IBFs values. He is Human Rights Professor at Tallinn University, as well as coordinator of the Global Digital Human Rights Network."
-          linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
-          portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
-        />
+         
 
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C5103AQFUrgJJ1X83AQ/profile-displayphoto-shrink_200_200/0/1517521355286?e=1631145600&v=beta&t=4gJ_aZqX27iGUkrFbCKU7ouAf85n1w1vmrlQYG4xes8"
@@ -105,6 +106,13 @@ else
       <h2>{isEnglish ? 'Who we are?' : 'Quem somos?'}</h2>
 
       <SlickSlider {...settings}>
+        <SliderItem 
+          imageSource="assets/images/Mart-susi.jpg"
+          title="Mart Susi"
+          description="O interesse de Mart por direitos humanos e tecnologia é a principal motivação da IBRA. Ele é professor de Direitos Humanos na Universidade de Tallinn e coordenador da Global Digital Human Rights Network."
+          linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
+          portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
+        />
         <SliderItem
           imageSource="https://media-exp3.licdn.com/dms/image/C4D03AQGRVrKHeoYn8g/profile-displayphoto-shrink_200_200/0/1603903071556?e=1631145600&v=beta&t=ioMar4w_jadHEL7Y0xrMreQdxCqAdwNHYHasKk3wANg"
           title="Thomas Palmeira Ferraz"
@@ -134,18 +142,12 @@ else
           linkedInUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
           portfolioUrl="https://www.linkedin.com/in/caio-henrique-dias-duarte-101aa2115/"
         />
-        {/* <SliderItem 
-          imageSource="assets/images/Mart-susi.jpg"
-          title="Mart Susi"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
-          linkedInUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
-          portfolioUrl="https://www.linkedin.com/in/mart-susi-5971b3207/"
-        />
+        
 
         <SliderItem 
           imageSource="https://media-exp3.licdn.com/dms/image/C5103AQFUrgJJ1X83AQ/profile-displayphoto-shrink_200_200/0/1517521355286?e=1631145600&v=beta&t=4gJ_aZqX27iGUkrFbCKU7ouAf85n1w1vmrlQYG4xes8"
           title="Roseli Lopes"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum sapien eget nisi accumsan facilisis. Donec sodales, orci a ornare hendrerit, dolor mauris aliquam nibh, at lacinia lectus mi nec ante."
+          description="Roseli tem décadas de experiência com tecnologia e educação. Uma das maiores especialistas no tema na América Latina, ela é Professora no Laboratório de Sistemas Integráveis da POLI USP."
           linkedInUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
           portfolioUrl="https://www.linkedin.com/in/roseli-lopes-591324117/"
         /> */}
