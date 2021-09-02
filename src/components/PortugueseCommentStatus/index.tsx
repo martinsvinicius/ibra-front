@@ -34,7 +34,7 @@ export function PortugueseCommentStatus({
           empresa e <span className="blue-active">seus clientes</span>
         </h1>
 
-        <form onSubmit={(e) => handleSubmit(e)} id="commentForm">
+        <form onSubmit={(e) => handleSubmit(e)}>
           {textOrCsv === 'text' ? <ConsultComment /> : <UploadFile />}
           <label htmlFor="" onClick={handleChangeInputType} className="inputLabel">
             {textOrCsv === 'text' ? (
@@ -54,7 +54,7 @@ export function PortugueseCommentStatus({
         </div>
       )}
 
-      {status !== null && textOrCsv === 'text' && (
+      {status && textOrCsv === 'text' && (
         <div className="commentStatus">
           <div className="statusPoints">
             <CommentStatusItem
@@ -100,7 +100,7 @@ export function PortugueseCommentStatus({
         </div>
       )}
 
-      {status !== null && textOrCsv === 'csv' && (
+      {status && textOrCsv === 'csv' && (
         <div className="commentStatus">
           <CommentsStatusTable data={dataToTable} />
         </div>

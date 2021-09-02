@@ -60,14 +60,10 @@ export const Container = styled.div`
     cursor: pointer;
   }
 
-  button {
-    border: none;
-    background: transparent;
-    img {
-      transition: all 0.2s;
-      &:hover {
-        transform: scale(1.05);
-      }
+  img {
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.05);
     }
   }
 `;

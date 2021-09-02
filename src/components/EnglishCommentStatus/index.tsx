@@ -1,6 +1,5 @@
 import { Status } from '../../pages/get-started';
 import { Content } from '../../styles/pages/product';
-import { CommentsStatusTable } from '../CommentsStatusTable';
 import { CommentStatusItem } from '../CommentStatusItem';
 import { ConsultComment } from '../ConsultComment';
 import { UploadFile } from '../UploadFile';
@@ -18,14 +17,6 @@ export function EnglishCommentStatus({
   textOrCsv,
   handleChangeInputType
 }: EnglishCommentStatusProps) {
-  const dataToTable = [
-    {
-      comment: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      status: status as Status,
-      commentJustification: 'Comentário removido pois não se trata de um figura pública e há invasão a privacidade.',
-    },
-  ];
-
   return (
     <Content>
       <div className="comment">
@@ -34,7 +25,7 @@ export function EnglishCommentStatus({
           <span className="blue-active">your clients</span>
         </h1>
 
-        <form onSubmit={(e) => handleSubmit(e)} id="commentForm">
+        <form onSubmit={(e) => handleSubmit(e)}>
           {textOrCsv === 'text' ? <ConsultComment /> : <UploadFile />}
           <label htmlFor="" onClick={handleChangeInputType} className="inputLabel">
             {textOrCsv === 'text' ? (
@@ -50,11 +41,11 @@ export function EnglishCommentStatus({
 
       {!status && (
         <div className="commentStatus">
-          <p id="emptyData">Submit a comment or a .CSV file to see how it works.</p>
+          <h1>tem nada aq n</h1>
         </div>
       )}
 
-      {status !== null && textOrCsv === 'text' && (
+      {status && (
         <div className="commentStatus">
           <div className="statusPoints">
             <CommentStatusItem
@@ -97,12 +88,6 @@ export function EnglishCommentStatus({
               </span>
             </p>
           </div>
-        </div>
-      )}
-
-      {status !== null && textOrCsv === 'csv' && (
-        <div className="commentStatus">
-          <CommentsStatusTable data={dataToTable} />
         </div>
       )}
     </Content>
